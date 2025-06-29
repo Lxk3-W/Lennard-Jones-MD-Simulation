@@ -4,17 +4,20 @@ import matplotlib.pyplot as plt
 import tkinter as tk
 
 
+part_pos = np.random.rand(2, 2) * 10
 
+velocities = np.random.rand(2, 2)
 
-part_pos_x = np.random.rand(5)
-part_pos_y = np.random.rand(5)
-part_pos_z = np.random.rand(5)
+timesteps = 10
 
-velocities = np.random.rand(5)
+for i in range(timesteps):
+    part_pos += velocities * timesteps
+
 
 
 
 print(part_pos_z)
 
-plt.scatter(part_pos_x, part_pos_y)
+plt.clf
+plt.scatter(part_pos, part_pos_y)
 plt.show()
