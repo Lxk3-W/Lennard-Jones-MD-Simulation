@@ -2,7 +2,7 @@ import numpy as np
 from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
 import tkinter as tk
-plt.style.use ('seaborn-v0_8-poster')
+
 
 
 #print(plt.style.available)
