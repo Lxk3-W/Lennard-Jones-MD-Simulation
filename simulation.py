@@ -19,7 +19,7 @@ mask_y = (part_pos[:, 1] < 0) | (part_pos[:, 1] > 10)
 velocities[mask_x, 0] *= -1
 velocities[mask_y, 1] *= -1
 
-print(part_pos_z)
+
 
 plt.clf
 plt.scatter(part_pos[:, 0], part_pos[:, 1])
