@@ -5,11 +5,14 @@ import tkinter as tk
 
 
 
-#print(plt.style.available)
 
 part_pos_x = np.random.rand(5)
 part_pos_y = np.random.rand(5)
 part_pos_z = np.random.rand(5)
+
+velocities = np.random.rand(5)
+
+
 
 print(part_pos_z)
 
