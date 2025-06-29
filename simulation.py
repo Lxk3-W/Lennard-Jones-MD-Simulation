@@ -13,11 +13,17 @@ timesteps = 10
 for i in range(timesteps):
     part_pos += velocities * timesteps
 
+mask_x = (part_pos[:, 0] < 0) | (part_pos[:, 0] > 10)
+mask_y = (part_pos[:, 1] < 0) | (part_pos[:, 1] > 10)
 
-
+velocities[mask_x, 0] *= -1
+velocities[mask_y, 1] *= -1
 
 print(part_pos_z)
 
 plt.clf
-plt.scatter(part_pos, part_pos_y)
+plt.scatter(part_pos[:, 0], part_pos[:, 1])
+plt.xlim(0, 10)
+plt.ylim(0, 10)
+plt.pause(0.01)
 plt.show()
