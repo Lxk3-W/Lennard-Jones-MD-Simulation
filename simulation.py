@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 import tkinter as tk
 
 
-part_pos = np.random.rand(2, 2) * 10
+part_pos = np.random.rand(100, 2) * 10
 
-velocities = np.random.rand(2, 2)
+velocities = np.random.randn(100, 2)
 
-timesteps = 10
+timesteps = 1000
 
 for i in range(timesteps):
     part_pos += velocities * timesteps
@@ -21,8 +21,8 @@ velocities[mask_y, 1] *= -1
 
 
 
-plt.clf
-plt.scatter(part_pos[:, 0], part_pos[:, 1])
+plt.clf()
+plt.scatter(part_pos[:, 0], part_pos[:, 1], c='blue')
 plt.xlim(0, 10)
 plt.ylim(0, 10)
 plt.pause(0.01)
